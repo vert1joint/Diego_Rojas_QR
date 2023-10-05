@@ -1,0 +1,49 @@
+{
+  "animalitos": [
+    {
+      "id": 1,
+      "nombre": "Alexander",
+      "tipoMascota": "Perrito",
+      "raza": "Quiltro"
+    },
+    {
+      "id": 2,
+      "nombre": "Nicolas",
+      "tipoMascota": "Perrito",
+      "raza": "Quiltro"
+    },
+    {
+      "id": 3,
+      "nombre": "Gato ñau",
+      "tipoMascota": "Gato",
+      "raza": "Siamés"
+    },
+    {
+      "nombre": "Chester",
+      "tipoMascota": "Gato",
+      "raza": "Quiltro",
+      "id": 4
+    },
+    {
+      "nombre": "Rayo",
+      "tipoMascota": "Gatito",
+      "raza": "Quiltrito",
+      "id": 5
+    },
+    {
+      "nombre": "Raven",
+      "tipoMascota": "Caballo",
+      "raza": "Purasangre",
+      "id": 6
+    },
+    {
+      "nombre": "Charizard",
+      "tipoMascota": "Pókemon",
+      "raza": "Dragón",
+      "id": 7
+    }
+  ],
+  "usuarios": [
+    {}
+  ]
+}

@@ -1,0 +1,57 @@
+ion-content{
+    --ion-background-color: #1d3422
+}
+
+ion-toolbar{
+    background-color: var(--ion-color-mycolor);
+}
+
+ion-menu{
+    --ion-background-color: #1d3422
+}
+
+.logo-container {
+    align-items: center;
+    margin-bottom: 0px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.google-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.separator {
+    text-align: center;
+    margin: 10px 0;
+    font-weight: bold;
+    color: #666;
+}
+
+ion-button {
+    margin-top: 10px;
+}
+
+.clase-color{
+    --background: var(--ion-color-mycolor);
+    color: white;
+}
+
+.container{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.mensaje {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.mensaje p {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    opacity: 50%;
+}

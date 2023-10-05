@@ -1,0 +1,71 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="mycolor">
+    <ion-buttons slot="start">
+      <ion-button (click)="MostrarMenu()">
+        <ion-icon slot="icon-only" name="menu-outline" color=""></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Información</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Actualizaciones</ion-title>
+    </ion-toolbar>
+  </ion-header> -->
+
+  <ion-content class="ion-padding">
+    <h1>Bienvenido a RegistrApp!</h1>
+    <p>Una empresa contratada por DuocUc para asistir a sus alumnos</p>
+  
+    <!-- Información sobre la compañía -->
+    <ion-card class="cartas">
+      <ion-card-header>
+        <ion-card-title>Acerca de RegistrApp:</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Una compañía con la misión de permitir facilitar la toma de asistencias para alumnos y profesores!</p>
+      </ion-card-content>
+    </ion-card>
+  
+    <!-- Productos o servicios -->
+    <ion-card class="cartas">
+      <ion-card-header>
+        <ion-card-title>Con esta aplicación los alumnos podrán:</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ul>
+          <li>Tomar asistencias de forma rápida</li>
+          <li>Permitir apelar inasistencias</li>
+          <li>Plataforma con asistencia 24/7</li>
+        </ul>
+      </ion-card-content>
+    </ion-card>
+  
+    <!-- Contacto -->
+    <ion-card class="cartas">
+      <ion-card-header>
+        <ion-card-title>Contacto</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Puedes contactarnos en:</p>
+        <ul>
+          <li>Email: info@registrapp.com</li>
+          <li>Teléfono: +123456789</li>
+          <li>Dirección: Calle lejos, Ciudad Santiago</li>
+        </ul>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="cartas">
+      <ion-card-header>
+        <ion-card-title style="text-align: center;">Nuestro logo!</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <img style="border-radius: 10px;" src="assets/logo.png">
+      </ion-card-content>
+    </ion-card>
+
+</ion-content>
