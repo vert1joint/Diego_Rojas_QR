@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="mycolor">
+    <ion-buttons slot="start">
+      <ion-button (click)="MostrarMenu()" >
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Inicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" color="mycolor">
+
+  <!-- <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Inicio</ion-title>
+    </ion-toolbar>
+  </ion-header> -->
+
+
+  <ion-content class="ion-padding">
+  
+  <div class="image-container">
+    <img src="assets/logo.png" class="rounded-image">
+  </div>
+
+  <div style="text-align: center; font-weight: bold; font-family: cambria; font-size: 30px;">
+    <p class="breathing-text">RegistrApp!</p>
+  </div>
+
+  <div *ngIf="bandera" style="text-align: center; font-weight: bold; font-family: cambria; font-size: 15px;">
+    <p class="breathing-text">Bienvenido de nuevo {{ usuario.nombre }}!</p>
+  </div>
+
+  <div class="button-container" >
+    <ion-button class="clase-color" shape="round" routerLink="/select" *ngIf="!bandera">Registrarse</ion-button>
+    <ion-button class="clase-color" shape="round" routerLink="/select-log"  *ngIf="!bandera">Iniciar Sesión</ion-button>
+    <div class="link" *ngIf="!bandera">
+      <a href="/" routerLink="/recpcontra">¿Olvidaste tu contraseña?</a>
+    </div>
+    <ion-button class="clase-color" style="padding-top: 40px;" shape="round" *ngIf="bandera" (click)="logout()">Cerrar Sesión</ion-button>
+  </div>
+  
+</ion-content>
+

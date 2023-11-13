@@ -1,0 +1,97 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="mycolor">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" color="">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>Ya casi!</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div class="logo-container">
+    <img src="assets/logo.png" alt="Logo de Google" class="google-logo">
+  </div>
+
+  <div class="container">
+    <div class="mensaje">
+      <p>¡Bienvenido estimado Alumno! A continuación le solicitamos que ingrese todos los campos solicitados correctamente.</p>
+    </div>
+  </div>
+
+  <form [formGroup]="registermistForm" color="mycolor">
+    <ion-item color="mycolor">
+      <ion-label position="floating">Rut</ion-label>
+      <ion-input type="text" name="txtRut" formControlName="rut"></ion-input>
+    </ion-item>
+    
+    <ion-item color="mycolor">
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input type="text" name="txtNom" formControlName="nombre"></ion-input>
+    </ion-item>
+
+    <ion-item color="mycolor">
+      <ion-label position="floating">Apellido</ion-label>
+      <ion-input type="text" name="txtApe" formControlName="apellido" ></ion-input>
+    </ion-item>
+
+    <ion-item color="mycolor"> 
+      <ion-label position="floating">Correo Electrónico</ion-label>
+      <ion-input type="email" name="txtEmail" formControlName="correo" ></ion-input>
+    </ion-item>
+
+    <ion-item color="mycolor">
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" name="txtPass" formControlName="contrasena" ></ion-input>
+    </ion-item>
+
+    <ion-item color="mycolor">
+      <ion-label>Carrera</ion-label>
+      <ion-select interface="action-sheet" formControlName="carrera">
+        <ion-select-option value="Ingeniería en Informática">Ingeniería en Informática</ion-select-option>
+        <ion-select-option value="Ingeniería en Electricidad y Automatización Industrial">Ingeniería en Electricidad y Automatización Industrial</ion-select-option>
+        <ion-select-option value="Técnico en Enfermería">Técnico en Enfermería</ion-select-option>
+        <ion-select-option value="Diseño Gráfico">Diseño Gráfico</ion-select-option>
+        <ion-select-option value="Ingeniería en Construcción">Ingeniería en Construcción</ion-select-option>
+        <ion-select-option value="Administración de Empresas">Administración de Empresas</ion-select-option>
+        <ion-select-option value="Educación Parvularia">Educación Parvularia</ion-select-option>
+        <ion-select-option value="Ingeniería en Sonido">Ingeniería en Sonido</ion-select-option>
+        <ion-select-option value="Kinesiología">Kinesiología</ion-select-option>
+        <ion-select-option value="Psicopedagogía">Psicopedagogía</ion-select-option>
+        <ion-select-option value="Ingeniería en Prevención de Riesgos">Ingeniería en Prevención de Riesgos</ion-select-option>
+        <ion-select-option value="Turismo">Turismo</ion-select-option>
+        <ion-select-option value="Contabilidad General">Contabilidad General</ion-select-option>
+        <ion-select-option value="Ingeniería Comercial">Ingeniería Comercial</ion-select-option>
+      </ion-select>
+    </ion-item>
+  
+    <ion-item color="mycolor">
+      <ion-label>Sede</ion-label>
+      <ion-select interface="action-sheet" formControlName="sede" >
+        <ion-select-option value="Sede Central">Sede Central</ion-select-option>
+        <ion-select-option value="Sede Maipú">Sede Maipú</ion-select-option>
+        <ion-select-option value="Sede Concepción">Sede Concepción</ion-select-option>
+        <ion-select-option value="Sede Valparaíso">Sede Valparaíso</ion-select-option>
+        <ion-select-option value="Sede San Joaquín">Sede San Joaquín</ion-select-option>
+        <ion-select-option value="Sede Viña del Mar">Sede Viña del Mar</ion-select-option>
+        <ion-select-option value="Sede Valdivia">Sede Valdivia</ion-select-option>
+        <ion-select-option value="Sede San Andrés">Sede San Andrés</ion-select-option>
+        <ion-select-option value="Sede San Bernardo">Sede San Bernardo</ion-select-option>
+        <ion-select-option value="Sede Los Ángeles">Sede Los Ángeles</ion-select-option>
+      </ion-select>
+    </ion-item>
+  
+    <ion-item color="mycolor">
+      <ion-label>Jornada</ion-label>
+      <ion-select formControlName="jornada">
+        <ion-select-option value="Vespertina">Vespertina</ion-select-option>
+        <ion-select-option value="Diurna">Diurna</ion-select-option>
+      </ion-select>
+    </ion-item>
+  
+    <ion-button style="margin-top: 10px; margin-bottom: 40px;" [disabled]="!registermistForm.valid" expand="full" class="clase-color" (click)="Enviar()" (click)="registroAlumno()" shape="round">Registrarse</ion-button>
+
+  </form>
+
+</ion-content>

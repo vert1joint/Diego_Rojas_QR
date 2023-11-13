@@ -1,0 +1,241 @@
+{
+  "animalitos": [
+    {
+      "id": 1,
+      "nombre": "Alexander",
+      "correo": "alexweko@gmail.com",
+      "carrera": "Ing en ser weko",
+      "sede": "Sede San Andrés",
+      "jornada": "Vespertina"
+    },
+    {
+      "id": 2,
+      "nombre": "Nicolas",
+      "tipoMascota": "Perrito",
+      "raza": "Quiltro"
+    },
+    {
+      "id": 3,
+      "nombre": "Gato ñau",
+      "tipoMascota": "Gato",
+      "raza": "Siamés"
+    },
+    {
+      "nombre": "Chester",
+      "tipoMascota": "Gato",
+      "raza": "Quiltro",
+      "id": 4
+    },
+    {
+      "nombre": "Rayo",
+      "tipoMascota": "Gatito",
+      "raza": "Quiltrito",
+      "id": 5
+    }
+  ],
+  "docentes": [
+    {
+      "id": 2,
+      "rut": "21.564.207-0",
+      "nombre": "Profesor Diego",
+      "apellido": "Rojas Reyes",
+      "correo": "diego.rrojas@live.cl",
+      "contrasena": "duoc",
+      "asignatura1": "Matemáticas",
+      "asignatura2": "Ética",
+      "sede": "Sede Valparaíso",
+      "jornada": "Diurna"
+    },
+    {
+      "rut": "21.560.434-0",
+      "nombre": "Alex",
+      "apellido": "Mazuela",
+      "correo": "alex.vales@gmail.com",
+      "contrasena": "duoc",
+      "asignatura1": "Historia",
+      "asignatura2": "Arquitectura",
+      "sede": "Sede San Bernardo",
+      "jornada": "Diurna",
+      "id": 3
+    },
+    {
+      "id": 4,
+      "rut": "21.802.034-8",
+      "nombre": "Camila",
+      "apellido": "Villalobos",
+      "correo": "camila.villalobos@outlook.com",
+      "contrasena": "hola",
+      "asignatura1": "Lenguaje",
+      "asignatura2": "Q/A",
+      "sede": "Sede Maipú",
+      "jornada": "Diurna"
+    },
+    {
+      "rut": "21.562.548-4",
+      "nombre": "Jacqueline",
+      "apellido": "Reyees",
+      "correo": "jacquelin@outlook.com",
+      "contrasena": "duocduoc",
+      "asignatura1": "Lenguaje",
+      "asignatura2": "Q/A",
+      "sede": "Sede Valdivia",
+      "jornada": "Diurna",
+      "id": 5
+    },
+    {
+      "rut": "21.802.034-8",
+      "nombre": "Diego",
+      "apellido": "Rojas Reyes",
+      "correo": "di.rojasr@duocuc.cl",
+      "contrasena": "duocduoc",
+      "asignatura1": "Lenguaje",
+      "asignatura2": "Estadística",
+      "sede": "Sede San Andrés",
+      "jornada": "Diurna",
+      "id": 6
+    },
+    {
+      "id": 7,
+      "rut": "1.343.545-3",
+      "nombre": "Elizabeths",
+      "apellido": "Guajardo",
+      "correo": "elizabeth.profesor@duocuc.cl",
+      "contrasena": "duocduoc",
+      "asignatura1": "Lenguaje",
+      "asignatura2": "Estadística",
+      "sede": "Sede Maipú",
+      "jornada": "Vespertina"
+    }
+  ],
+  "alumnos": [
+    {
+      "id": 1,
+      "rut": "1.111.111-2",
+      "nombre": "AlexanderWekitoOfical",
+      "apellido": "Pizarra",
+      "correo": "alexweko@gmail.com",
+      "contrasena": "soygay",
+      "carrera": "Ing en ser weko",
+      "sede": "Sede San Andrés",
+      "jornada": "Vespertina"
+    },
+    {
+      "id": 2,
+      "rut": "21.564.207-0",
+      "nombre": "Diego Ignacio",
+      "apellido": "Rojas Reyes",
+      "correo": "diegorojasgoku@outlook.com",
+      "contrasena": "duocduoc",
+      "carrera": "Diseño Gráfico",
+      "sede": "Sede San Joaquín",
+      "jornada": "Diurna"
+    },
+    {
+      "id": 3,
+      "rut": "19.783.950-0",
+      "nombre": "Matias prueba 9",
+      "apellido": "Lopez",
+      "correo": "matias@duocuc.cl",
+      "contrasena": "duocduoc",
+      "carrera": "Educación Parvularia",
+      "sede": "Sede San Joaquín",
+      "jornada": "Diurna"
+    }
+  ],
+  "mensajes": [
+    {
+      "id": 1,
+      "contenido": "Panamericanos",
+      "nombreProfesor": "diego.rrojas@live.cl"
+    },
+    {
+      "contenido": "Profe de estadistica",
+      "nombreProfesor": "Elizabeths",
+      "asignatura": "Estadística",
+      "id": 2
+    },
+    {
+      "contenido": "Esta es la clase de lenguaje",
+      "nombreProfesor": "Elizabeths",
+      "asignatura": "Q/A",
+      "id": 3
+    },
+    {
+      "contenido": "Clase del lunes",
+      "nombreProfesor": "Elizabeths",
+      "asignatura": "Lenguaje",
+      "fechaCreacion": "2023-11-08T17:14:24.925Z",
+      "id": 4
+    },
+    {
+      "contenido": "Holi",
+      "nombreProfesor": "Camila",
+      "asignatura": "Lenguaje",
+      "fechaCreacion": "2023-11-08T17:34:33.335Z",
+      "id": 6
+    },
+    {
+      "contenido": "Holaaa",
+      "nombreProfesor": "Camila",
+      "asignatura": "Q/A",
+      "fechaCreacion": "2023-11-08T17:34:43.124Z",
+      "id": 7
+    },
+    {
+      "contenido": "Bienvenidos aqui a mi nuevo qr generado ya nomas cabros kls no semmeten medio rojo",
+      "nombreProfesor": "Elizabeths",
+      "asignatura": "Lenguaje",
+      "fechaCreacion": "2023-11-08T19:22:09.855Z",
+      "id": 8
+    },
+    {
+      "contenido": "Prueba giles kls los voy a hacer pico",
+      "nombreProfesor": "Elizabeths",
+      "asignatura": "Estadística",
+      "fechaCreacion": "2023-11-09T02:38:54.727Z",
+      "id": 9
+    },
+    {
+      "contenido": "Carewes",
+      "nombreProfesor": "Camila",
+      "asignatura": "Lenguaje",
+      "fechaCreacion": "2023-11-09T02:42:01.051Z",
+      "id": 10
+    },
+    {
+      "contenido": "p43982p39849'0p38945'03294'03294'0392'43820948329048320480'392840923840238094382094823",
+      "nombreProfesor": "Camila",
+      "asignatura": "Lenguaje",
+      "fechaCreacion": "2023-11-09T02:42:18.316Z",
+      "id": 11
+    },
+    {
+      "contenido": "Eri entero weillo",
+      "nombreProfesor": "Camila",
+      "asignatura": "Q/A",
+      "fechaCreacion": "2023-11-09T15:40:11.369Z",
+      "id": 12
+    },
+    {
+      "contenido": "Hola cabrones",
+      "nombreProfesor": "Elizabeths",
+      "asignatura": "Estadística",
+      "fechaCreacion": "13/11/2023, 11:19:33",
+      "id": 13
+    },
+    {
+      "contenido": "videos.com",
+      "nombreProfesor": "Elizabeths",
+      "asignatura": "Lenguaje",
+      "fechaCreacion": "13/11/2023, 11:23:47",
+      "id": 14
+    },
+    {
+      "contenido": "New Class QA for informatic students",
+      "nombreProfesor": "Camila",
+      "asignatura": "Q/A",
+      "fechaCreacion": "13/11/2023, 11:25:45",
+      "id": 15
+    }
+  ]
+}

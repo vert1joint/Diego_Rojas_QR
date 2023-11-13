@@ -1,0 +1,59 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="mycolor">
+    <ion-buttons slot="start">
+      <ion-button (click)="MostrarMenu()" >
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Bienvenido Alumno</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" >
+
+  <div class="logo-container">
+    <img src="assets/logo.png" alt="Logo de Google" class="google-logo">
+  </div>
+
+  <form [formGroup]="iniciarAlumForm" color="mycolor">
+    <ion-item color="mycolor">
+      <ion-label position="floating">Correo Electrónico</ion-label>
+      <ion-input type="text" formControlName="correo"></ion-input>
+    </ion-item>
+
+    <div class="container" *ngIf="iniciarAlumForm.get('correo')?.invalid && (iniciarAlumForm.get('correo')?.dirty || iniciarAlumForm.get('correo')?.touched)">
+      <div class="mensaje" *ngIf="iniciarAlumForm.get('correo')?.hasError('required')">
+        <p>¡Correo Electrónico obligatorio!</p>
+      </div>
+      <div class="mensaje" *ngIf="iniciarAlumForm.get('correo')?.hasError('minlength')">
+        <p>¡Correo Electrónico debe tener mínimo 4 carácteres!</p>
+      </div>
+    </div>
+
+    <ion-item color="mycolor">
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" formControlName="contrasena"></ion-input>
+    </ion-item>
+
+    <div class="container" *ngIf="iniciarAlumForm.get('contrasena')?.invalid && (iniciarAlumForm.get('contrasena')?.dirty || iniciarAlumForm.get('contrasena')?.touched)">
+      <div class="mensaje" *ngIf="iniciarAlumForm.get('contrasena')?.hasError('required')">
+        <p>¡Contraseña obligatoria!</p>
+      </div>
+      <div class="mensaje" *ngIf="iniciarAlumForm.get('contrasena')?.hasError('minlength')">
+        <p>¡Contraseña debe tenrer mínimo 4 carácteres!</p>
+      </div>
+    </div>
+
+    <div class="container" *ngIf="showAlert">
+      <div class="mensajeError">
+        <p>Correo Electrónico o Contraseña inválidos</p>
+      </div>
+    </div>
+
+    <ion-button (click)="login2()" [disabled]="!iniciarAlumForm.valid" expand="full" shape="round" class="clase-color">Iniciar Sesión</ion-button>
+
+    <div class="separator">o</div>
+
+    <ion-button expand="full" color="light" shape="round" routerLink="/select">Crear cuenta de RegistrApp</ion-button>
+  </form>
+</ion-content>

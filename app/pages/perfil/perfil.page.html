@@ -1,0 +1,99 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="mycolor">
+    <ion-buttons slot="start">
+      <ion-button (click)="MostrarMenu()" >
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" >
+
+  <ion-card-content >
+    <img src="assets/logo.png" alt="Logo de Google" class="bigicon">
+  </ion-card-content>
+
+  <div class="container" *ngIf="role === 'false'">
+    <div class="mensaje">
+      <p>¡Bienvenido Alumno!</p>
+    </div>
+  </div>
+  <div class="container" *ngIf="role === 'true'">
+    <div class="mensaje">
+      <p>¡Bienvenido Profesor!</p>
+    </div>
+  </div>
+
+
+  <ion-item color="mycolor">
+    <ion-label>
+      <h2>Nombre</h2>
+      <ion-input style="font-size: 15px; margin-left: -6px;" type="text" [readonly]="isReadOnly" [(ngModel)]="usuario.nombre"></ion-input>
+    </ion-label>
+    <ion-button  expand="block" (click)="activarEdicion()" shape="round">Editar</ion-button>
+    <ion-icon name="person-outline"></ion-icon>
+  </ion-item>
+
+  <ion-item color="mycolor">
+    <ion-label>
+      <h2>Rut</h2>
+      <ion-input style="font-size: 15px; margin-left: -6px;" type="text" [readonly]="isReadOnly" required [(ngModel)]="usuario.rut"></ion-input>
+    </ion-label>
+    <ion-button  expand="block" (click)="activarEdicion()" shape="round">Editar</ion-button>
+    <ion-icon name="person-outline"></ion-icon>
+  </ion-item>
+
+  <ion-item color="mycolor">
+    <ion-label>
+      <h2>Email</h2>
+      <p>{{ usuario.correo }}</p>
+    </ion-label>
+    <ion-icon name="mail-outline"></ion-icon>
+  </ion-item>
+
+  <ion-item color="mycolor"> 
+    <ion-label>
+      <h2>Sede</h2>
+      <p>{{ usuario.sede }}</p>
+    </ion-label>
+    <ion-icon name="globe-outline"></ion-icon>
+  </ion-item>
+
+  <ion-item color="mycolor" *ngIf="role === 'true'">
+    <ion-label>
+      <h2>Asignatura 1</h2>
+      <p>{{ usuario.asignatura1 }}</p>
+    </ion-label>
+    <ion-icon name="library-outline"></ion-icon>
+  </ion-item>
+  <ion-item color="mycolor" *ngIf="role === 'true'">
+    <ion-label>
+      <h2>Asignatura 2</h2>
+      <p>{{ usuario.asignatura2 }}</p>
+    </ion-label>
+    <ion-icon name="library-outline"></ion-icon>
+  </ion-item>
+
+  <ion-item color="mycolor" *ngIf="role === 'false'">
+    <ion-label>
+      <h2>Carrera</h2>
+      <p>{{ usuario.carrera }}</p>
+    </ion-label>
+    <ion-icon name="library-outline"></ion-icon>
+  </ion-item>
+
+  <ion-item color="mycolor">
+    <ion-label>
+      <h2>Jornada</h2>
+      <p>{{ usuario.jornada }}</p>
+    </ion-label>
+    <ion-icon name="id-card-outline"></ion-icon>
+  </ion-item>
+
+  <ion-button class="clase-color" id="out2" *ngIf="!isReadOnly && role === 'false'" shape="round" (click)="updateAlumno()">Actualizar</ion-button>
+  <ion-button class="clase-color" id="out2" *ngIf="!isReadOnly && role === 'true'" shape="round" (click)="updateDocente()">Actualizar</ion-button>
+  <ion-button class="clase-color" id="out" shape="round"(click)="logout()">Cerrar sesión</ion-button>
+  
+</ion-content>

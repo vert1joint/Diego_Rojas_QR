@@ -1,0 +1,74 @@
+<ion-app>
+  <ion-menu contentId="main" menuId="first" side="start" swipe-gesture="false">
+    <ion-header>
+      <div class="logo-container">
+        <img src="assets/logo.png" alt="Logo de Google" class="google-logo">
+      </div>
+      <div class="container">
+        <div class="mensaje">
+          <p>Menú RegistrApp!</p>
+        </div>
+      </div>
+    </ion-header>
+
+
+    <ion-content>
+      <ion-list >
+        <div *ngIf="!logged">
+          <ion-menu-toggle *ngFor="let c of loggedout">
+            <ion-item [routerLink]="c.redirecTo" detail="true">
+              <ion-icon slot="start" [name]="c.icon" color="success">
+              </ion-icon>
+              {{ c.name }}
+            </ion-item>
+          </ion-menu-toggle>
+        </div>
+
+        <!-- Vista Menu Docente -->
+        <div *ngIf="logged && role === 'true'">
+          <ion-menu-toggle *ngFor="let c of loggedinDoc">
+            <div *ngIf="c.name === 'Cerrar Sesión'; else normal"style="margin-top: 14.8rem;">
+              <ion-item [routerLink]="c.redirecTo" detail="true" (click)="performAction(c)">
+                <ion-icon slot="start" [name]="c.icon" color="success">
+                </ion-icon>
+                {{ c.name }}
+              </ion-item>
+            </div>
+
+            <ng-template #normal>
+              <ion-item [routerLink]="c.redirecTo" detail="true" (click)="performAction(c)">
+                <ion-icon slot="start" [name]="c.icon" color="success">
+                </ion-icon>
+                {{ c.name }}
+              </ion-item>
+            </ng-template>
+          </ion-menu-toggle>
+        </div>
+
+        <!-- Vista Menu Alumno -->
+        <div *ngIf="logged && role === 'false'">
+          <ion-menu-toggle *ngFor="let c of loggedinAlum">
+            <div *ngIf="c.name === 'Cerrar Sesión'; else normal"style="margin-top: 17.8rem;">
+              <ion-item [routerLink]="c.redirecTo" detail="true" (click)="performAction(c)">
+                <ion-icon slot="start" [name]="c.icon" color="success">
+                </ion-icon>
+                {{ c.name }}
+              </ion-item>
+            </div>
+
+            <ng-template #normal>
+              <ion-item [routerLink]="c.redirecTo" detail="true" (click)="performAction(c)">
+                <ion-icon slot="start" [name]="c.icon" color="success">
+                </ion-icon>
+                {{ c.name }}
+              </ion-item>
+            </ng-template>
+          </ion-menu-toggle>
+        </div>
+
+        
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-app>

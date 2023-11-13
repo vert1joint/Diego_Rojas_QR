@@ -1,0 +1,67 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="mycolor">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"
+        color=""></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/qrlist']">
+        QRs
+      </ion-button>
+    </ion-buttons>
+    <ion-title>QR Generate</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Actualizaciones</ion-title>
+    </ion-toolbar>
+  </ion-header> -->
+
+  <div class="logo-container">
+    <img src="assets/logo.png" alt="Logo de Google" class="google-logo">
+  </div>
+
+  <div class="container">
+    <div class="mensaje">
+      <p>Aquí puedes crear tus invitaciones para compartirla con tus alumnos!
+      </p>
+    </div>
+  </div>
+  
+
+  <ion-card class="ion-text-center" id="cartas">
+    <p>Hora Actual: {{ fechaActual }}</p>
+
+    <ion-item color="mycolor">
+      <ion-label>Asignatura</ion-label>
+      <ion-select interface="action-sheet" [(ngModel)]="opcionSeleccionada" (ionChange)="capturarValor()">
+        <ion-select-option value="{{ asignatura1 }}">{{ asignatura1 }}</ion-select-option>
+        <ion-select-option value="{{ asignatura2 }}">{{ asignatura2 }}</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item color="mycolor">
+      <ion-label position="floating">Ingrese el contenido de su invitación!</ion-label>
+      <ion-input type="text" [(ngModel)]="data.texto" required></ion-input>
+     </ion-item>
+
+    <ion-button (click)="generarQr()" class="clase-color" expand="block" [disabled]="!opcionElegida" shape="round" style="margin-left: 30px; margin-right: 30px;">
+      Generar Qr
+     </ion-button>
+
+    <ion-card-content color="mycolor">
+      <qrcode [qrdata]="mensaje" [width]="256" [errorCorrectionLevel]="'M'" *ngIf="time"></qrcode>
+    </ion-card-content>
+    </ion-card>
+
+    <div class="cot">
+      <div class="men">
+        <p>AVISO: Los CódigosQR generados solo serán mostrados durante 15 minutos!
+        </p>
+    </div>
+  </div>
+
+</ion-content>

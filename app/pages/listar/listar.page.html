@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="mycolor">
+    <ion-buttons slot="start">
+      <ion-button (click)="MostrarMenu()" >
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/agregar']">
+        Agregar
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Listar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">apinoti</ion-title>
+    </ion-toolbar>
+  </ion-header> -->
+
+  <ion-content class="ion-padding">
+    <h1>Bienvenido a nuestro portal de animalitos!</h1>
+    <p>Aquí encontrarás muchos animales para adoptar!</p>
+
+    <ion-list> 
+      <ion-item *ngFor="let a of animalitos" class="ion-item-background">
+        <ion-label>{{a['nombre']}}</ion-label>
+        <ion-label>{{a['tipoMascota']}}</ion-label>
+        <ion-label>{{a['raza']}}</ion-label>
+      </ion-item>
+    </ion-list>
+    
+</ion-content>

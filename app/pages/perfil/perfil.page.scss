@@ -1,0 +1,72 @@
+ion-content{
+  --ion-background-color: #1d3422
+}
+
+ion-toolbar{
+  background-color: var(--ion-color-mycolor);
+}
+
+ion-menu{
+  --ion-background-color: #1d3422
+}
+
+// .logo-container {
+//   align-items: center;
+//   margin-bottom: 20px;
+//   margin-top: 20px;
+//   margin-left: 20px;
+// }
+  
+// .google-logo {
+//   width: 40px;
+//   height: 40px;
+//   border-radius: 5px;
+// }
+
+.bigicon{
+    border-radius: 5px;
+}
+
+.separator {
+  text-align: center;
+  margin: 10px 0;
+  font-weight: bold;
+  color: #666;
+}
+
+ion-button {
+  margin-top: 10px;
+}
+
+.clase-color{
+  --background: var(--ion-color-mycolor);
+  color: white;
+}
+
+#out{
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 65px;
+}
+
+#out2{
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 80px;
+}
+
+
+.container{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.mensaje {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.mensaje p{
+  font-size: 18px;
+}

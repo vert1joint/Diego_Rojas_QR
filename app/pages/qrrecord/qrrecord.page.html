@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="mycolor">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"
+        color=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detalle de la Invitación</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" >
+  <!-- <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Actualizaciones</ion-title>
+    </ion-toolbar>
+  </ion-header> -->
+
+  <div class="container">
+    <div class="mensaje">
+      <p>Recuerda que despues del tiempo limite del QR ya no aparecerá en el detalle!
+      </p>
+    </div>
+  </div>
+
+  <ion-card class="cartas">
+
+    <ion-card-header>
+      <ion-card-subtitle>ID #{{mensajes.id}}</ion-card-subtitle>
+      <ion-card-title>Asignatura: {{mensajes.asignatura}} </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p>Profesor: {{mensajes.nombreProfesor}} </p>
+    </ion-card-content>
+
+    <ion-card class="clase-color">
+      <ion-card-content style="text-align: center;">
+        <ion-card-subtitle>Contenido del QR</ion-card-subtitle>
+        <br>
+        {{mensajes.contenido}}
+      </ion-card-content>
+    </ion-card>
+    <ion-card-subtitle class="date">Creación: {{mensajes.fechaCreacion}}</ion-card-subtitle>
+  </ion-card>
+
+</ion-content>

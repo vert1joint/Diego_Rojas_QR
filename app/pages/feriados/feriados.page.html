@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="mycolor">
+    <ion-buttons slot="start">
+      <ion-button (click)="MostrarMenu()" >
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Feriados</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">apinoti</ion-title>
+    </ion-toolbar>
+  </ion-header> -->
+
+  <ion-content class="ion-padding">
+    <h1>Bienvenido a nuestro portal de feriados!</h1>
+    <p>Aquí encontrarás todos los feriados legales</p>
+
+    <!-- Información sobre noticias -->
+    <ion-card *ngFor="let c of articulos" class="cartas" >
+      <ion-card-header>
+        <ion-card-subtitle>
+          <span class="text-primary"></span>
+        </ion-card-subtitle>
+        <ion-card-title>{{c.title}}</ion-card-title>
+        <span>{{c.date}}</span>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Motivo: {{c.extra}}</p>
+      </ion-card-content>
+    </ion-card>
+
+</ion-content>

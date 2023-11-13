@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="mycolor">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"
+        color=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Estás a un paso!</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" >
+  <!-- <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Actualizaciones</ion-title>
+    </ion-toolbar>
+  </ion-header> -->
+
+  
+
+  <div class="container">
+    <div class="mensaje">
+      <p>Selecciona como ingresar en RegistrApp!</p>
+    </div>
+  </div>
+
+  <div id="botones">
+   <ion-button routerLink="/iniciar" fill="clear" expand="block" class="custom-button" id="clase-color">
+      <img src="assets/profesor.png" alt="Imagen del profesor">
+      <p>Docente</p>   
+    </ion-button>
+  </div>
+
+  <div id="botones" class="img-est">
+    <ion-button routerLink="/iniciar-alum" fill="clear" expand="block" class="custom-button" id="clase-color">
+       <img src="assets/estudiante.png" alt="Imagen del estudiante">
+       <p>Alumno</p>   
+     </ion-button>
+  </div>
+
+  <div style="text-align: center; font-weight: bold; font-family: cambria; font-size: 10px; margin-top: 155px;">
+    <p class="breathing-text">2023 DuocUc. RegistrApp!© Todos los derechos reservados</p>
+  </div>
+
+</ion-content>
