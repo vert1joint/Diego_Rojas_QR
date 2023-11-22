@@ -27,16 +27,37 @@ export class RegistroAlumnoPage implements OnInit {
   }
 
 
+  async correoExistenteValidator(control: AbstractControl): Promise<ValidationErrors | null> {
+    const correo = control.value;
+  
+    try {
+      const resp1 = await this.apicrud.verificarCorreoExistente(correo).toPromise();
+      const resp2 = await this.apicrud.verificarCorreoExistenteAlumno(correo).toPromise();
+  
+      if (resp1.length > 0 || resp2.length > 0) {
+        return { correoExistente: true };
+      }
+  
+      return null;
+    } catch (error) {
+      console.error(error);
+      return { correoExistente: true };
+    }
+  }
+
   constructor(private alertController: AlertController,
     private apicrud: ApiregisterService,
-
     private router:  Router,
     private fbuilder: FormBuilder) { 
       this.registermistForm = this.fbuilder.group({
         'rut': new FormControl("",[Validators.required, Validators.minLength(9),Validators.pattern(/^(\d{1,3}(?:\.\d{1,3}){2}-\d|(\d{1,3}){2}-\d{1,3}(?:\.\d{1,3})|(\d{1,3}){2}-\d{1,3}(?:\.\d{1,3})?)$/)]),
         'nombre': new FormControl("",[Validators.required, Validators.minLength(4)]),
         'apellido': new FormControl("",[Validators.required, Validators.minLength(4)]),
-        'correo': new FormControl('', [Validators.required]),
+        'correo': new FormControl('', {
+          validators: [Validators.required, Validators.email],
+          asyncValidators: [this.correoExistenteValidator.bind(this)],
+          updateOn: 'blur'
+        }),
         'contrasena':new FormControl("", [Validators.required, Validators.minLength(8)]),
         'carrera': new FormControl("",[Validators.required]),
         'sede': new FormControl("",[Validators.required]),

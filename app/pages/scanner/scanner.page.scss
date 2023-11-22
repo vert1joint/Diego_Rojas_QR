@@ -1,0 +1,23 @@
+/* Agrega estilos CSS en tu archivo de estilos global o componente específico */
+body.scanner-active {
+    background: transparent !important;
+    --background: rgba(0, 0, 0, 0.2) !important;
+}
+
+.fondo{
+    --ion-background-color: #1d3422
+}
+
+ion-toolbar{
+  background-color: var(--ion-color-mycolor);
+}
+
+.scaning{
+    text-align: center;
+    align-items: center;
+    margin-top: 500px;
+}
+
+ion-button{
+    background-color: var(--ion-color-mycolor);
+}

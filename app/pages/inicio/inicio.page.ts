@@ -4,13 +4,14 @@ import { AuthService } from 'src/app/servicios/auth.service';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { ToastController } from '@ionic/angular';
+import { BarcodeScanner } from '@capacitor-community/barcode-scanner';
 
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.page.html',
   styleUrls: ['./inicio.page.scss'],
 })
-export class InicioPage implements OnInit {
+export class InicioPage {
   usuario={
     nombre:"",
   }
@@ -23,8 +24,7 @@ export class InicioPage implements OnInit {
               private toastcontroller: ToastController,
               private location: Location) { this.obtainStorage(); }
 
-  ngOnInit(   ) {
-  }
+  
 
   MostrarMenu(){
     this.menuController.open('first');

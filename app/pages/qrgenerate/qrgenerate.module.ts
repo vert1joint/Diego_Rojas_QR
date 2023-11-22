@@ -10,12 +10,14 @@ import { QrgeneratePage } from './qrgenerate.page';
 
 import { QRCodeModule } from 'angularx-qrcode';
 
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     IonicModule,
     QRCodeModule,
     QrgeneratePageRoutingModule

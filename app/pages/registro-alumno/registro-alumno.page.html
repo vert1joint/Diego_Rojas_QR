@@ -40,11 +40,30 @@
       <ion-label position="floating">Correo Electrónico</ion-label>
       <ion-input type="email" name="txtEmail" formControlName="correo" ></ion-input>
     </ion-item>
+    <div class="container" *ngIf="registermistForm.get('correo')?.invalid && (registermistForm.get('correo')?.dirty || registermistForm.get('correo')?.touched)">
+      <div class="mensaje" *ngIf="registermistForm.get('correo')?.hasError('required')">
+        <p>¡Correo Electrónico obligatorio!</p>
+      </div>
+      <div class="mensaje" *ngIf="registermistForm.get('correo')?.hasError('email')">
+        <p>¡Debe ser una dirección de correo válida!</p>
+      </div>
+      <div class="mensaje" *ngIf="registermistForm.get('correo')?.hasError('correoExistente')">
+        <p>Esta dirección de correo ya existe</p>
+      </div>
+    </div>
 
     <ion-item color="mycolor">
       <ion-label position="floating">Contraseña</ion-label>
       <ion-input type="password" name="txtPass" formControlName="contrasena" ></ion-input>
     </ion-item>
+    <div class="container" *ngIf="registermistForm.get('contrasena')?.invalid && (registermistForm.get('contrasena')?.dirty || registermistForm.get('contrasena')?.touched)">
+      <div class="mensaje" *ngIf="registermistForm.get('contrasena')?.hasError('required')">
+        <p>¡Contraseña obligatoria!</p>
+      </div>
+      <div class="mensaje" *ngIf="registermistForm.get('contrasena')?.hasError('minlength')">
+        <p>¡La contraseña debe tener mínimo 8 carácteres!</p>
+      </div>
+    </div>
 
     <ion-item color="mycolor">
       <ion-label>Carrera</ion-label>

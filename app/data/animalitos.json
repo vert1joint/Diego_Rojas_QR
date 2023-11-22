@@ -47,16 +47,16 @@
       "jornada": "Diurna"
     },
     {
+      "id": 3,
       "rut": "21.560.434-0",
-      "nombre": "Alex",
+      "nombre": "Alexktm",
       "apellido": "Mazuela",
       "correo": "alex.vales@gmail.com",
       "contrasena": "duoc",
       "asignatura1": "Historia",
       "asignatura2": "Arquitectura",
       "sede": "Sede San Bernardo",
-      "jornada": "Diurna",
-      "id": 3
+      "jornada": "Diurna"
     },
     {
       "id": 4,
@@ -96,7 +96,7 @@
     },
     {
       "id": 7,
-      "rut": "1.343.545-3",
+      "rut": "1.343.545-0",
       "nombre": "Elizabeths",
       "apellido": "Guajardo",
       "correo": "elizabeth.profesor@duocuc.cl",
@@ -144,25 +144,33 @@
   ],
   "mensajes": [
     {
-      "id": 1,
-      "contenido": "Panamericanos",
-      "nombreProfesor": "diego.rrojas@live.cl"
+      "contenido": "Holi",
+      "nombreProfesor": "Camila",
+      "correoProfesor": "camila.villalobos@outlook.com",
+      "asignatura": "Lenguaje",
+      "fechaCreacion": "2023-11-08T17:34:33.335Z",
+      "id": 1
     },
     {
       "contenido": "Profe de estadistica",
       "nombreProfesor": "Elizabeths",
+      "correoProfesor": "elizabeth.profesor@duocuc.cl",
       "asignatura": "Estadística",
+      "fechaCreacion": "2023-11-08T17:14:24.925Z",
       "id": 2
     },
     {
       "contenido": "Esta es la clase de lenguaje",
       "nombreProfesor": "Elizabeths",
+      "correoProfesor": "elizabeth.profesor@duocuc.cl",
       "asignatura": "Q/A",
+      "fechaCreacion": "2023-11-08T17:14:24.925Z",
       "id": 3
     },
     {
       "contenido": "Clase del lunes",
       "nombreProfesor": "Elizabeths",
+      "correoProfesor": "elizabeth.profesor@duocuc.cl",
       "asignatura": "Lenguaje",
       "fechaCreacion": "2023-11-08T17:14:24.925Z",
       "id": 4
@@ -170,6 +178,7 @@
     {
       "contenido": "Holi",
       "nombreProfesor": "Camila",
+      "correoProfesor": "camila.villalobos@outlook.com",
       "asignatura": "Lenguaje",
       "fechaCreacion": "2023-11-08T17:34:33.335Z",
       "id": 6
@@ -177,6 +186,7 @@
     {
       "contenido": "Holaaa",
       "nombreProfesor": "Camila",
+      "correoProfesor": "camila.villalobos@outlook.com",
       "asignatura": "Q/A",
       "fechaCreacion": "2023-11-08T17:34:43.124Z",
       "id": 7
@@ -184,6 +194,7 @@
     {
       "contenido": "Bienvenidos aqui a mi nuevo qr generado ya nomas cabros kls no semmeten medio rojo",
       "nombreProfesor": "Elizabeths",
+      "correoProfesor": "elizabeth.profesor@duocuc.cl",
       "asignatura": "Lenguaje",
       "fechaCreacion": "2023-11-08T19:22:09.855Z",
       "id": 8
@@ -191,6 +202,7 @@
     {
       "contenido": "Prueba giles kls los voy a hacer pico",
       "nombreProfesor": "Elizabeths",
+      "correoProfesor": "elizabeth.profesor@duocuc.cl",
       "asignatura": "Estadística",
       "fechaCreacion": "2023-11-09T02:38:54.727Z",
       "id": 9
@@ -198,6 +210,7 @@
     {
       "contenido": "Carewes",
       "nombreProfesor": "Camila",
+      "correoProfesor": "camila.villalobos@outlook.com",
       "asignatura": "Lenguaje",
       "fechaCreacion": "2023-11-09T02:42:01.051Z",
       "id": 10
@@ -205,6 +218,7 @@
     {
       "contenido": "p43982p39849'0p38945'03294'03294'0392'43820948329048320480'392840923840238094382094823",
       "nombreProfesor": "Camila",
+      "correoProfesor": "camila.villalobos@outlook.com",
       "asignatura": "Lenguaje",
       "fechaCreacion": "2023-11-09T02:42:18.316Z",
       "id": 11
@@ -212,6 +226,7 @@
     {
       "contenido": "Eri entero weillo",
       "nombreProfesor": "Camila",
+      "correoProfesor": "camila.villalobos@outlook.com",
       "asignatura": "Q/A",
       "fechaCreacion": "2023-11-09T15:40:11.369Z",
       "id": 12
@@ -219,6 +234,7 @@
     {
       "contenido": "Hola cabrones",
       "nombreProfesor": "Elizabeths",
+      "correoProfesor": "elizabeth.profesor@duocuc.cl",
       "asignatura": "Estadística",
       "fechaCreacion": "13/11/2023, 11:19:33",
       "id": 13
@@ -226,6 +242,7 @@
     {
       "contenido": "videos.com",
       "nombreProfesor": "Elizabeths",
+      "correoProfesor": "elizabeth.profesor@duocuc.cl",
       "asignatura": "Lenguaje",
       "fechaCreacion": "13/11/2023, 11:23:47",
       "id": 14
@@ -233,9 +250,90 @@
     {
       "contenido": "New Class QA for informatic students",
       "nombreProfesor": "Camila",
+      "correoProfesor": "camila.villalobos@outlook.com",
       "asignatura": "Q/A",
       "fechaCreacion": "13/11/2023, 11:25:45",
       "id": 15
+    },
+    {
+      "contenido": "Fome historia acontinuaciuon jolaperra kls",
+      "nombreProfesor": "Alex",
+      "correoProfesor": "alex.vales@gmail.com",
+      "asignatura": "Historia",
+      "fechaCreacion": "13/11/2023, 16:06:37",
+      "id": 16
+    },
+    {
+      "contenido": "this.usuario.nombreProfesor=this.nombre;roba",
+      "nombreProfesor": "Alexito",
+      "correoProfesor": "alex.vales@gmail.com",
+      "asignatura": "Historia",
+      "fechaCreacion": "15/11/2023, 00:32:19",
+      "id": 17
+    },
+    {
+      "contenido": "86889709809",
+      "nombreProfesor": "Elizabeths",
+      "correoProfesor": "elizabeth.profesor@duocuc.cl",
+      "asignatura": "Estadística",
+      "fechaCreacion": "15/11/2023, 13:11:11",
+      "id": 18
+    },
+    {
+      "contenido": "Holaaa",
+      "nombreProfesor": "Elizabeths",
+      "correoProfesor": "elizabeth.profesor@duocuc.cl",
+      "asignatura": "Lenguaje",
+      "fechaCreacion": "16/11/2023, 14:58:16",
+      "id": 19
+    },
+    {
+      "contenido": "Aki somo o no somos",
+      "nombreProfesor": "Elizabeths",
+      "correoProfesor": "elizabeth.profesor@duocuc.cl",
+      "asignatura": "Lenguaje",
+      "fechaCreacion": "16/11/2023, 14:58:39",
+      "id": 20
+    },
+    {
+      "contenido": "p2340p942389042380",
+      "nombreProfesor": "Elizabeths",
+      "correoProfesor": "elizabeth.profesor@duocuc.cl",
+      "asignatura": "Estadística",
+      "fechaCreacion": "16/11/2023, 15:45:20",
+      "id": 34
+    },
+    {
+      "contenido": "holi a todo el perro mundo",
+      "nombreProfesor": "Elizabeths",
+      "correoProfesor": "elizabeth.profesor@duocuc.cl",
+      "asignatura": "Estadística",
+      "fechaCreacion": "16/11/2023, 15:46:17",
+      "id": 35
+    },
+    {
+      "contenido": "Holaaa",
+      "nombreProfesor": "Elizabeths",
+      "correoProfesor": "elizabeth.profesor@duocuc.cl",
+      "asignatura": "Lenguaje",
+      "fechaCreacion": "16/11/2023, 15:47:20",
+      "id": 36
+    },
+    {
+      "contenido": "https://www.duoc.cl/alumnos/",
+      "nombreProfesor": "Elizabeths",
+      "correoProfesor": "elizabeth.profesor@duocuc.cl",
+      "asignatura": "Lenguaje",
+      "fechaCreacion": "16/11/2023, 15:59:36",
+      "id": 37
+    },
+    {
+      "contenido": "34223423423",
+      "nombreProfesor": "Elizabeths",
+      "correoProfesor": "elizabeth.profesor@duocuc.cl",
+      "asignatura": "Lenguaje",
+      "fechaCreacion": "16/11/2023, 16:00:56",
+      "id": 38
     }
   ]
 }

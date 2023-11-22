@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/servicios/auth.service';
 import { IQR } from '../interfaces/interfaces';
+import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { AlertController } from '@ionic/angular';
 import { InfiniteScrollCustomEvent } from '@ionic/angular';
-import { LoadingController } from '@ionic/angular';
+import { LoadingController,MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-qrgenerate',
@@ -11,54 +12,67 @@ import { LoadingController } from '@ionic/angular';
   styleUrls: ['./qrgenerate.page.scss'],
 })
 export class QrgeneratePage{
+  qrForm: FormGroup;
   fechaActual: string;
   public mensaje: string;
+  userdata: any;
 
   public asignatura1: any;
   public asignatura2: any;
 
   time:boolean = true;
   data={
-    texto:''
+    texto:'',
+    asignature:''
   }
 
   nombre: any;
-  asignatura: any;
+  correo: any;
   fecha: any;
 
   usuario: IQR={
     contenido:'',
     nombreProfesor:'',
+    correoProfesor:'',
     asignatura:'',
     fechaCreacion:'',
   }
   constructor(private authservice: AuthService,
+              private menucontroller: MenuController,
               private alertcontroller: AlertController,
-              private loadCtrl: LoadingController) { this.mensaje=''; this.ionViewWillEnter(); this.fechaActual = ''; }
+              private loadCtrl: LoadingController,
+              private fbuilder: FormBuilder) { this.mensaje=''; this.ionViewWillEnter(); this.fechaActual = ''; 
+                this.qrForm = this.fbuilder.group({
+                  'asignature': new FormControl("",[Validators.required]),
+                  'texto': new FormControl("",[Validators.required, Validators.minLength(5)])
+              })
+            }
 
   ionViewWillEnter(){ 
     this.actualizarFecha();
     this.nombre = sessionStorage.getItem("nombre");
+    this.correo = sessionStorage.getItem("correo");
     this.asignatura1 = sessionStorage.getItem("asignatura1");
     this.asignatura2 = sessionStorage.getItem("asignatura2");
   }
 
   generarQr(){
-    this.mensaje=this.data.texto;
-    this.usuario.nombreProfesor=this.nombre;
-    this.usuario.asignatura=this.asignatura;
-    this.usuario.contenido=this.mensaje;
-    this.fecha = this.fechaActual;
-    this.usuario.fechaCreacion = this.fecha;
-    this.authservice.CrearMensaje(this.usuario).subscribe();
-    this.mostrarMensaje();
-    this.data.texto='';
-    this.time = true;
-
-    setTimeout(() => {
-      this.mensaje = '';
-      this.time = false;
-    }, 300000);
+      this.mensaje=this.qrForm.controls['texto'].value;
+      this.usuario.nombreProfesor=this.nombre;
+      this.usuario.correoProfesor=this.correo;
+      this.usuario.asignatura=this.qrForm.controls['asignature'].value;
+      this.usuario.contenido=this.mensaje;
+      this.fecha = this.fechaActual;
+      this.usuario.fechaCreacion = this.fecha;
+      this.authservice.CrearMensaje(this.usuario).subscribe();
+      this.mostrarMensaje();
+      this.data.texto='';
+      this.time = true;
+      this.qrForm.reset();
+      setTimeout(() => {
+        this.mensaje = '';
+        this.time = false;
+      }, 300000);
   }
 
   async mostrarMensaje(){
@@ -98,15 +112,10 @@ export class QrgeneratePage{
     }
   }
   
-  
-  opcionSeleccionada: string | null = null; // Variable que almacena la opción seleccionada
-  opcionElegida = false; // Bandera para habilitar/deshabilitar el botón "generarQR"
-  capturarValor() {
-    this.asignatura = this.opcionSeleccionada; // Almacena el valor seleccionado en la variable
-    this.opcionElegida = this.asignatura !== null; // Habilita/deshabilita el botón si se selecciona una opción
+  MostrarMenu(){
+    this.menucontroller.open('first');
   }
 
-
-
+  
 
 }

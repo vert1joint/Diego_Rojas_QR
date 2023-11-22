@@ -116,6 +116,7 @@ export interface IQRs{
     id:number;
     contenido:String;
     nombreProfesor:String;
+    correoProfesor:String;
     asignatura:String;
     fechaCreacion:String;
 }
@@ -124,6 +125,7 @@ export interface IQRs{
 export interface IQR{
     contenido:String;
     nombreProfesor:String;
+    correoProfesor:String;
     asignatura:String;
     fechaCreacion:String;
 }

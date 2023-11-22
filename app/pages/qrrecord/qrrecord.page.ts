@@ -12,8 +12,9 @@ export class QrrecordPage implements OnInit {
     id:0,
     contenido:"",
     nombreProfesor:"",
+    correoProfesor:"",
     asignatura:"",
-    fechaCreacion:""
+    fechaCreacion:"",
   }
 
   constructor(private router: Router,
@@ -39,6 +40,7 @@ export class QrrecordPage implements OnInit {
           id: resp[0].id,
           contenido: resp[0].contenido,
           nombreProfesor: resp[0].nombreProfesor,
+          correoProfesor: resp[0].correoProfesor,
           asignatura: resp[0].asignatura,
           fechaCreacion: resp[0].fechaCreacion
         }

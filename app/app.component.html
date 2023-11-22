@@ -48,7 +48,7 @@
         <!-- Vista Menu Alumno -->
         <div *ngIf="logged && role === 'false'">
           <ion-menu-toggle *ngFor="let c of loggedinAlum">
-            <div *ngIf="c.name === 'Cerrar Sesión'; else normal"style="margin-top: 17.8rem;">
+            <div *ngIf="c.name === 'Cerrar Sesión'; else normal"style="margin-top: 14.8rem;">
               <ion-item [routerLink]="c.redirecTo" detail="true" (click)="performAction(c)">
                 <ion-icon slot="start" [name]="c.icon" color="success">
                 </ion-icon>

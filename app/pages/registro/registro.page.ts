@@ -30,15 +30,22 @@ export class RegistroPage implements OnInit {
     jornada:""
   }
 
-  correoExistenteValidator(control: AbstractControl): Promise<ValidationErrors | null> {
+  async correoExistenteValidator(control: AbstractControl): Promise<ValidationErrors | null> {
     const correo = control.value;
-
-    return this.apicrud.verificarCorreoExistente(correo).toPromise().then(resp => {
-      if (resp.length > 0) {
+  
+    try {
+      const resp1 = await this.apicrud.verificarCorreoExistente(correo).toPromise();
+      const resp2 = await this.apicrud.verificarCorreoExistenteAlumno(correo).toPromise();
+  
+      if (resp1.length > 0 || resp2.length > 0) {
         return { correoExistente: true };
       }
+  
       return null;
-    });
+    } catch (error) {
+      console.error(error);
+      return { correoExistente: true };
+    }
   }
 
   constructor(private alertController: AlertController,

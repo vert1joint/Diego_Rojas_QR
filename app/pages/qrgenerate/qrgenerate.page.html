@@ -1,8 +1,9 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="mycolor">
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/"
-        color=""></ion-back-button>
+      <ion-button (click)="MostrarMenu()">
+        <ion-icon slot="icon-only" name="menu-outline" color=""></ion-icon>
+      </ion-button>
     </ion-buttons>
     <ion-buttons slot="end">
       <ion-button [routerLink]="['/qrlist']">
@@ -30,38 +31,45 @@
       </p>
     </div>
   </div>
+
+  <form [formGroup]="qrForm">
   
+    <ion-card class="ion-text-center" id="cartas">
+      <p>Hora Actual: {{ fechaActual }}</p>
+      <ion-item color="mycolor">
+        <ion-label>Asignatura</ion-label>
+        <ion-select interface="action-sheet" formControlName="asignature">
+          <ion-select-option value="{{ asignatura1 }}">{{ asignatura1 }}</ion-select-option>
+          <ion-select-option value="{{ asignatura2 }}">{{ asignatura2 }}</ion-select-option>
+        </ion-select>
+      </ion-item>
 
-  <ion-card class="ion-text-center" id="cartas">
-    <p>Hora Actual: {{ fechaActual }}</p>
+      <ion-item color="mycolor">
+        <ion-label position="floating">Ingrese el contenido de su invitación!</ion-label>
+        <ion-input type="text" formControlName="texto" required></ion-input>
+      </ion-item>
+      <div class="container" *ngIf="qrForm.get('texto')?.invalid && (qrForm.get('texto')?.dirty || qrForm.get('texto')?.touched)">
+        <div class="mensaje" *ngIf="qrForm.get('texto')?.hasError('minlength')">
+          <p>¡El contenido debe tener como mínimo 5 carácteres!</p>
+        </div>
+      </div>
 
-    <ion-item color="mycolor">
-      <ion-label>Asignatura</ion-label>
-      <ion-select interface="action-sheet" [(ngModel)]="opcionSeleccionada" (ionChange)="capturarValor()">
-        <ion-select-option value="{{ asignatura1 }}">{{ asignatura1 }}</ion-select-option>
-        <ion-select-option value="{{ asignatura2 }}">{{ asignatura2 }}</ion-select-option>
-      </ion-select>
-    </ion-item>
+      <ion-button (click)="generarQr()" class="clase-color" expand="block" [disabled]="!qrForm.valid" shape="round" style="margin-left: 30px; margin-right: 30px;">
+        Generar Qr
+      </ion-button>
 
-    <ion-item color="mycolor">
-      <ion-label position="floating">Ingrese el contenido de su invitación!</ion-label>
-      <ion-input type="text" [(ngModel)]="data.texto" required></ion-input>
-     </ion-item>
-
-    <ion-button (click)="generarQr()" class="clase-color" expand="block" [disabled]="!opcionElegida" shape="round" style="margin-left: 30px; margin-right: 30px;">
-      Generar Qr
-     </ion-button>
-
-    <ion-card-content color="mycolor">
-      <qrcode [qrdata]="mensaje" [width]="256" [errorCorrectionLevel]="'M'" *ngIf="time"></qrcode>
-    </ion-card-content>
+      <ion-card-content color="mycolor">
+        <qrcode [qrdata]="mensaje" [width]="256" [errorCorrectionLevel]="'M'" ></qrcode>
+      </ion-card-content>
     </ion-card>
 
     <div class="cot">
       <div class="men">
         <p>AVISO: Los CódigosQR generados solo serán mostrados durante 15 minutos!
         </p>
+      </div>
     </div>
-  </div>
+
+  </form>
 
 </ion-content>

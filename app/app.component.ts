@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { AuthService } from './servicios/auth.service';
 import { ToastController } from '@ionic/angular';
+import { BarcodeScanner } from '@capacitor-community/barcode-scanner';
 
 interface LoggedOut {
   icon: string;
   name: string;
   redirecTo: string;
+  action?(): void;
 }
 
 interface LoggedInDoc {
@@ -30,6 +32,7 @@ interface LoggedInAlum {
 export class AppComponent {
   public logged: any;
   public role: any;
+  scannedResult : any;
 
   constructor(private authservice: AuthService,
               private toastcontroller: ToastController) { this.log(); }
@@ -95,6 +98,11 @@ export class AppComponent {
       icon: 'person-outline'
     },
     {
+      name: 'Scanear QR',
+      redirecTo: '/',
+      icon: 'qr-code-outline'
+    }, 
+    {
       name: 'Información',
       redirecTo: '/informacion',
       icon: 'alert-circle-outline'
@@ -119,6 +127,7 @@ export class AppComponent {
       icon: 'alert-circle-outline'
     }
   ];
+
 
   performAction(loggedinDoc: LoggedInDoc) {
     if (loggedinDoc.action) {

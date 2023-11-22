@@ -1,0 +1,33 @@
+<ion-header *ngIf="bandera">
+  <ion-toolbar color="mycolor">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" color="">
+      </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="bandera" class="fondo">
+  <div *ngIf="!bandera">
+    <p>Escaneando...</p>
+  </div>
+
+  <div *ngIf="bandera">
+    <p *ngIf="scannedResult" style="margin-left: 50px;  margin-top: 40%; font-size: large;">
+      <span style="font-weight: bold;">Result:</span> {{ scannedResult }}
+    </p>
+
+    <p *ngIf="!scannedResult && bandera" style="margin-left: 50px; margin-top: 40%; font-size: large;">Escaneo cancelado
+      o sin contenido.
+    </p>
+  </div>
+
+  <ion-button  color="mycolor" (click)="startScan()">
+    Iniciar escaneo
+  </ion-button>
+
+  <ion-button  color="mycolor" (click)="stopScan()">
+    Detener Scann
+  </ion-button>
+
+</ion-content>

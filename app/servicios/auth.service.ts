@@ -61,7 +61,7 @@ export class AuthService {
 
   //obtener QRs del JSON
   getAllQR(correo:any):Observable<IQRs>{
-    return this.httpclient.get<IQRs>(`${environment.apiUrl}/mensajes/?nombreProfesor=${correo}`);
+    return this.httpclient.get<IQRs>(`${environment.apiUrl}/mensajes/?correoProfesor=${correo}`);
   }
   getQRWithId(id:number):Observable<IQRs>{
     return this.httpclient.get<IQRs>(`${environment.apiUrl}/mensajes/?id=${id}`);

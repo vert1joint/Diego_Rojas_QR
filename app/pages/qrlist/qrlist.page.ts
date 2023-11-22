@@ -22,7 +22,7 @@ export class QrlistPage{
 
   ionViewWillEnter(){   //Actualiza la carga de datos al redireccionar
     this.LoadQRs();
-    let nombre = sessionStorage.getItem("nombre");
+    let nombre = sessionStorage.getItem("correo");
 
     if (nombre){
       this.usuario.nombre = nombre;
@@ -44,7 +44,7 @@ export class QrlistPage{
         let listString = JSON.stringify(resp); //Convertimos a String nuestro resp
         this.mensajes = JSON.parse(listString); //Convertiremos a JSON el string para almacenar
         event?.target.complete();
-        console.log(this.mensajes);
+        console.log(this.mensajes)
       },
       error: err=>{
         console.log(err.error.message);

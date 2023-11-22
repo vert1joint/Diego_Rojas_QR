@@ -86,6 +86,10 @@ const routes: Routes = [
     path: 'iniciar-alum',
     loadChildren: () => import('./pages/iniciar-alum/iniciar-alum.module').then( m => m.IniciarAlumPageModule)
   },
+  {
+    path: 'scanner',
+    loadChildren: () => import('./pages/scanner/scanner.module').then( m => m.ScannerPageModule)
+  },
 ];
 
 @NgModule({

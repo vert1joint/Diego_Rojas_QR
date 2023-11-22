@@ -35,6 +35,9 @@
   <div class="button-container" >
     <ion-button class="clase-color" shape="round" routerLink="/select" *ngIf="!bandera">Registrarse</ion-button>
     <ion-button class="clase-color" shape="round" routerLink="/select-log"  *ngIf="!bandera">Iniciar Sesión</ion-button>
+
+    <ion-button class="clase-color" shape="round"  *ngIf="!bandera" routerLink="/scanner">Scann QR</ion-button>
+
     <div class="link" *ngIf="!bandera">
       <a href="/" routerLink="/recpcontra">¿Olvidaste tu contraseña?</a>
     </div>

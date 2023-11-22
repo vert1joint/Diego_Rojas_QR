@@ -26,6 +26,9 @@ export class ApiregisterService {
   verificarCorreoExistente(correo: string): Observable<any> {
     return this.httpclient.get<any>(`${environment.apiUrl}/docentes/?correo=${correo}`);
   }
+  verificarCorreoExistenteAlumno(correo: string): Observable<any> {
+    return this.httpclient.get<any>(`${environment.apiUrl}/alumnos/?correo=${correo}`);
+  }
 
 
 
